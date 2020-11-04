@@ -1,0 +1,74 @@
+.episodesTableRoot {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Nunito', sans-serif;
+    position: absolute;
+    top: 9.375rem;
+    width: 70%;
+    background-color: #e2e8f0;
+    border-collapse: collapse;
+    border: 1px solid #D3D3D3;
+    border-radius: 5px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.episodesTableWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.episodesThead {
+    padding: 0 24px;
+    border-bottom: 1px solid #D3D3D3;
+}
+
+.episodesTableHead {
+    height: 56px;
+    display: grid;
+    grid-template-columns: 0.3fr 1.7fr 1fr 1fr 1.5fr 1fr;
+    text-align: left;
+    align-items: center;
+    font-size: 18px;
+    color: #153e5c;
+    font-weight: 500;
+}
+
+
+.episodesTableHead :last-child {
+    text-align: center;
+}
+
+.oneEpisode :last-child {
+    text-align: center;
+}
+
+.oneEpisode {
+    display: grid;
+    grid-template-columns: 0.3fr 1.7fr 1fr 1fr 1.5fr 1fr;
+    text-align: left;
+    align-items: center;
+    height: 70px;
+    border-bottom: 1px solid #D3D3D3;
+    color: #153e5c;
+    padding: 0 24px;
+    font-size: 16px;
+}
+
+@media (max-width: 1500px) {
+    .episodesTableHead {
+        grid-template-columns: 0.3fr 1.3fr 1fr 1fr 1.3fr 1fr;
+    }
+    .oneEpisode {
+        grid-template-columns: 0.3fr 1.3fr 1fr 1fr 1.3fr 1fr;
+    }
+}
+
+@media (max-width: 1200px) {
+    .episodesTableHead {
+        grid-template-columns: 0.3fr 1.2fr 1fr 1fr 1fr 1fr;
+    }
+    .oneEpisode {
+        grid-template-columns: 0.3fr 1fr 1fr 1fr 1fr 1fr;
+    }
+}
