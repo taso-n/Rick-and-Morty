@@ -1,0 +1,84 @@
+.oneEpisodeRoot {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 9.375rem;
+    width: 80%;
+    background-color: #e2e8f0;
+    border-radius: 5px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.oneEpisodeWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#oneEpisodeHeaderRoot {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #153e5c;
+    font-size: 1.5rem;
+    color: #e2e8f0;
+    text-transform: capitalize;
+    font-weight: normal;
+}
+
+.oneEpsiodeDetails {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.favoriteIcon {
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+}
+
+#oneEpisodeCharacterList {
+    background-color: #e2e8f0;
+    text-align: center;
+    padding: 1rem 5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.oneEpisodeCharacter {
+    margin: 0.625rem;
+    padding: 0.625rem;
+    border-radius: 4px;
+    box-shadow:  rgba(0, 0, 0, 0.1) 2px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px 5px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    font-size: 0.875rem;
+    color: #153e5c;
+    justify-content: space-between;
+    text-transform: capitalize;
+}
+.oneEpisodeCharacterActions {
+    margin-top: 0.75rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.oneEpisodeCharacterActions img {
+    cursor: pointer;
+}
+.oneEpisodeCharacterLeftSide {
+    display: flex;
+    flex-direction: column;
+}
+
+.oneEpisodeCharacterLeftSide img {
+    height: 9.375rem;
+    width: 9.375rem;
+}
+
+.oneEpisodeCharacterFooter {
+    width: 100%;
+    justify-content: center;
+}
+
