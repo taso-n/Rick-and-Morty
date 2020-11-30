@@ -25,13 +25,19 @@ export function Episodes (data) {
     const tableBody = document.querySelector('#episodesTable')
     data.results.forEach(element => {
         tableBody.innerHTML = tableBody.innerHTML +
-            `<tr class="oneEpisode">
-                <td class="episodeName">${element.id}</td>
-                <td class="episodeName">${element.name}</td>
-                <td class="episodeName">${element.episode}</td>
-                <td class="episodeName">${element.air_date}</td>
-                <td class="episodeName">${element.created}</td>
-                <td class="episodeName">act</td>
+            `
+            <tr class="oneEpisode">
+                    <td class="episodeName">${element.id}</td>
+                    <td class="episodeName">${element.name}</td>
+                    <td class="episodeName">${element.episode}</td>
+                    <td class="episodeName">${element.air_date}</td>
+                    <td class="episodeName">${element.created}</td>
+                    <td class="episodeName">
+                        <a href="/#/episode/${element.id}">
+                            <img class="actionIcons" src="./src/images/link.svg" />
+                        </a>
+                        <img class="actionIcons" src="./src/images/heart.svg" />
+                    </td>
             </tr>
             `
     });
