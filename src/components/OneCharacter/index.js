@@ -1,3 +1,5 @@
+import { isFavoriteCharacter, handleFavCharacterClick } from '/src/helpers/favorites.js';
+
 var characterWrapper = `
         <div class="oneCharacterHeader">
             <div id='stars'></div>
@@ -7,7 +9,7 @@ var characterWrapper = `
                 <div id="imageSource" class="oneCharacterImageWrapper">
                 </div>
                 <div class="icon-wrapper">
-                    <img class="favoriteIcon" src="./src/images/heart.svg" />
+                    
                 </div>
             </div>
             <div id="headerInfo" class="information">
@@ -34,6 +36,7 @@ var characterWrapper = `
             </div>
         </div>
 `
+let currCharacter;
 
 export function OneCharacter(id) {
     console.log(id);
@@ -43,11 +46,17 @@ export function OneCharacter(id) {
 }
 
 function makeCharacter(data){
+    currCharacter = data
     const characterRoot = document.querySelector('#root')
     characterRoot.innerHTML = characterWrapper
     const episodesTable = document.querySelector('#episodesTable')
     const header = document.querySelector('#headerInfo')
     const image = document.querySelector('#imageSource')
+    const favIcon = document.querySelector('.icon-wrapper')
+
+    const isFav = isFavoriteCharacter(data)
+    console.log(isFav, 22);
+    favIcon.innerHTML = `<img id="characters/${data.id}" class="favoriteIcon" src="./src/images/${isFav ? `redHeart` : `heart`}.svg" />`
     image.innerHTML = `
     <img class="oneCharacterImage" src="${data.image}" />
     `
@@ -66,10 +75,24 @@ function makeCharacter(data){
                 <td class="episodeName">${episodeData.episode}</td>
                 <td class="episodeName">${episodeData.air_date}</td>
                 <td class="episodeName">${episodeData.created}</td>
-                <td class="episodeName">act</td>
+                <td class="episodeName">
+                    <a href="/#/episode/${episodeData.id}">
+                        <img class="actionIcons" src="./src/images/link.svg" />
+                    </a>
+                    <img id="episodes/${episodeData.id}" class="actionIcons" src="./src/images/heart.svg" />
+                </td>
             </tr>
             `
         )
     });
 }
 
+
+document.addEventListener('click', function (e) {
+    if(e.target.id === `characters/${currCharacter?.id}`){
+        handleFavCharacterClick(currCharacter)
+    }
+    if(e.target?.id?.toString().includes('episodes/')){
+        // handleFavEpisodeClick()
+    }
+})
