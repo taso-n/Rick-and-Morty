@@ -44,8 +44,8 @@
 }
 
 .icon-wrapper {
-    width: 2rem;
-    height: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
     padding: 1rem;
     border-radius: 50%;
     border: 1px dashed #153e5c;
@@ -54,10 +54,22 @@
     left: 69%;
 }
 
-.favoriteIcon {
-    width: 2rem;
-    height: 2rem;
+.starIconCharacter {
+    font-size: 5rem;
     cursor: pointer;
+    color: #e2e8f0;
+    position: absolute;
+    left: 0;
+    top: -1.1875rem;
+}
+
+.markedAsFavCharacter {
+    color: #f2be54;
+    font-size: 5rem;
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    top: -1.1875rem;
 }
 
 .information {

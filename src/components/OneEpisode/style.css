@@ -31,7 +31,19 @@
     row-gap: 1rem;
 }
 
-.favoriteIcon {
+.starIcon {
+    font-size: 5rem;
+    cursor: pointer;
+    color: #e2e8f0;
+}
+
+.markedAsFav {
+    color: #f2be54;
+    font-size: 5rem;
+    cursor: pointer;
+}
+
+.linkIcon {
     width: 2rem;
     height: 2rem;
     cursor: pointer;

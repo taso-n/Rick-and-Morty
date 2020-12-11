@@ -35,7 +35,7 @@ function makeEpisode(data){
             <span>Code: ${data.episode}</span>
             <span>Created: ${data.created}</span>
         </div>
-        <img id="episodes/${data.id}" class="favoriteIcon" src="./src/images/${isFav ? `redHeart` : `heart`}.svg" />
+        <span id="episodes/${data.id}" class="${isFav? 'markedAsFav' : 'starIcon'}">&#9733;</span>
     `
     
     data.characters.forEach(element => {
@@ -52,9 +52,8 @@ function makeEpisode(data){
                 <p>gender - ${characterData.gender}</p>
                 <div class="oneEpisodeCharacterActions">
                     <a href="/#/character/${characterData.id}">
-                        <img class="favoriteIcon" src="./src/images/link.svg" />
+                        <img class="linkIcon" src="./src/images/link.svg" />
                     </a>
-                    <img class="favoriteIcon" src="./src/images/heart.svg" />
                 </div>
             </div>
             <div class="oneEpisodeCharacterLeftSide">

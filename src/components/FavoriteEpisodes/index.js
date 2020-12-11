@@ -40,7 +40,7 @@ export function FavoriteEpisodes () {
                             <a href="/#/episode/${element.id}">
                                 <img class="actionIcons" src="./src/images/link.svg" />
                             </a>
-                            <img class="actionIcons" src="./src/images/redHeart.svg" />
+                            <span class="'markedAsFav'">&#9733;</span>
                         </td>
                 </tr>
                 `

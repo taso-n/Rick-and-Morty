@@ -21,24 +21,27 @@ var episodesTable = `
 
 export function Episodes (data) {
     const epsiodes = document.querySelector('#root')
-    epsiodes.innerHTML = episodesTable
-    const tableBody = document.querySelector('#episodesTable')
-    data.results.forEach(element => {
-        tableBody.innerHTML = tableBody.innerHTML +
-            `
-            <tr class="oneEpisode">
-                    <td class="episodeName">${element.id}</td>
-                    <td class="episodeName">${element.name}</td>
-                    <td class="episodeName">${element.episode}</td>
-                    <td class="episodeName">${element.air_date}</td>
-                    <td class="episodeName">${element.created}</td>
-                    <td class="episodeName">
-                        <a href="/#/episode/${element.id}">
-                            <img class="actionIcons" src="./src/images/link.svg" />
-                        </a>
-                        <img class="actionIcons" src="./src/images/heart.svg" />
-                    </td>
-            </tr>
-            `
-    });
+    if(data) {
+        epsiodes.innerHTML = episodesTable
+        const tableBody = document.querySelector('#episodesTable')
+        data.results.forEach(element => {
+            tableBody.innerHTML = tableBody.innerHTML +
+                `
+                <tr class="oneEpisode">
+                        <td class="episodeName">${element.id}</td>
+                        <td class="episodeName">${element.name}</td>
+                        <td class="episodeName">${element.episode}</td>
+                        <td class="episodeName">${element.air_date}</td>
+                        <td class="episodeName">${element.created}</td>
+                        <td class="episodeName">
+                            <a href="/#/episode/${element.id}">
+                                <img class="actionIcons" src="./src/images/link.svg" />
+                            </a>
+                        </td>
+                </tr>
+                `
+        });
+    } else {
+        epsiodes.innerHTML = `<div class="loading"></div>`
+    }
 }

@@ -56,7 +56,7 @@ function makeCharacter(data){
 
     const isFav = isFavoriteCharacter(data)
     console.log(isFav, 22);
-    favIcon.innerHTML = `<img id="characters/${data.id}" class="favoriteIcon" src="./src/images/${isFav ? `redHeart` : `heart`}.svg" />`
+    favIcon.innerHTML = `<span id="characters/${data.id}" class="${isFav ? 'markedAsFavCharacter' : 'starIconCharacter'}">&#9733;</span>`
     image.innerHTML = `
     <img class="oneCharacterImage" src="${data.image}" />
     `
@@ -79,7 +79,6 @@ function makeCharacter(data){
                     <a href="/#/episode/${episodeData.id}">
                         <img class="actionIcons" src="./src/images/link.svg" />
                     </a>
-                    <img id="episodes/${episodeData.id}" class="actionIcons" src="./src/images/heart.svg" />
                 </td>
             </tr>
             `
