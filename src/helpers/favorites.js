@@ -17,9 +17,12 @@ export const handleFavCharacterClick = (character) => {
   if(isFavoriteCharacter(character)){
     favorites = favorites.filter((el) => el.id !== character.id)
     localStorage.setItem('favoriteCharacters', JSON.stringify(favorites))
+    document.getElementById(`characters/${character.id}`).className = "starIconCharacter"
+
   } else {
     favorites.push(character)
     localStorage.setItem('favoriteCharacters', JSON.stringify(favorites))
+    document.getElementById(`characters/${character.id}`).className = "markedAsFavCharacter"
   }
 }
 
@@ -43,9 +46,11 @@ export const handleFavEpisodeClick = (episode) => {
   if(isFavoriteEpisode(episode)){
     favorites = favorites.filter((el) => el.id !== episode.id)
     localStorage.setItem('favoriteEpisodes', JSON.stringify(favorites))
+    document.getElementById(`episodes/${episode.id}`).className = "starIcon"
   } else {
     favorites.push(episode)
     localStorage.setItem('favoriteEpisodes', JSON.stringify(favorites))
+    document.getElementById(`episodes/${episode.id}`).className = "markedAsFav"
   }
 }
 
