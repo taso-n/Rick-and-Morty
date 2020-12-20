@@ -3,9 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="src/images/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="src/components/CharacterCards/style.css">
+    <link rel="stylesheet" href="src/components/Episodes/episodes.css">
+    <link rel="stylesheet" href="src/components/OneCharacter/style.css">
+    <link rel="stylesheet" href="src/components/OneEpisode/style.css">
     <title>Rick and Morty</title>
+    <script type="module" src='./app.js'></script>
+    <script type="module" src='./src/helpers/favorites.js'></script>
 </head>
 <body>
-    <h1>Hello World!</h1>
+    <div class="navigationRoot">
+        <div id="menuToggle">
+            <nav class="mobileNavigation" role="navigation">
+                <input type="checkbox" />
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                <ul id="menu">
+                <li>
+                    <a href="/#/characters" class="link">Characters</a>
+                </li>
+                <li>
+                    <a href="/#/episodes" class="link">Episodes</a>
+                </li>
+                <li>
+                    <a href="/#/favoriteCharacters" class="link">Favorite Characters</a>
+                </li>
+                <li>
+                    <a href="/#/favoriteEpisodes" class="link">Favorite Episodes</a>
+                </li>
+                </ul>
+            </nav>
+        </div>
+        <ul class="navigation">
+            <li><a href="/#/characters" class="link">Characters</a></li>
+            <li><a href="/#/episodes" class="link">Episodes</a></li>
+            <li><a href="/#/favoriteCharacters" class="link">Favorite Characters</a></li>
+            <li><a href="/#/favoriteEpisodes" class="link">Favorite episodes</a></li>
+        </ul>
+    </div>
+    <div id="root">
+    </div>
 </body>
 </html>
