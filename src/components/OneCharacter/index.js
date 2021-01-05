@@ -15,7 +15,7 @@ var characterWrapper = `
             <div id="headerInfo" class="information">
             </div>
         </div>
-        <div class="info">
+        <div class="oneCharacterInfo">
             <div class="oneCharacterTableWrapper">
                 <table class="oneCharacterTableRoot">
                     <thead class="oneCharacterThead">
@@ -23,8 +23,8 @@ var characterWrapper = `
                             <th>ID</th>
                             <th>Name</th>
                             <th>Code</th>
-                            <th>Air Date</th>
-                            <th>Created</th>
+                            <th class="episodeDate">Air Date</th>
+                            <th class="episodeDate">Created</th>
                             <th>Actions</th>
                         </tr>
         
@@ -69,12 +69,12 @@ function makeCharacter(data){
             .then(response => response.json())
             .then(episodeData =>
             episodesTable.innerHTML = episodesTable.innerHTML +
-            `<tr class="oneEpisode">
+            `<tr class="oneCharacterEpisode">
                 <td class="episodeName">${episodeData.id}</td>
                 <td class="episodeName">${episodeData.name}</td>
                 <td class="episodeName">${episodeData.episode}</td>
-                <td class="episodeName">${episodeData.air_date}</td>
-                <td class="episodeName">${episodeData.created}</td>
+                <td class="episodeName episodeDate">${episodeData.air_date}</td>
+                <td class="episodeName episodeDate">${episodeData.created}</td>
                 <td class="episodeName">
                     <a href="/#/episode/${episodeData.id}">
                         <img class="actionIcons" src="./src/images/link.svg" />

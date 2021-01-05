@@ -115,7 +115,7 @@
 }
 
 .oneCharacterThead {
-    padding: 0 24px;
+    padding: 0 1.5rem;
     border-bottom: 1px solid #D3D3D3;
 }
 
@@ -135,11 +135,7 @@
     text-align: center;
 }
 
-.oneEpisode :last-child {
-    text-align: center;
-}
-
-.oneEpisode {
+.oneCharacterEpisode {
     display: grid;
     grid-template-columns: 0.3fr 1.7fr 1fr 1fr 1.5fr 1fr;
     text-align: left;
@@ -147,7 +143,23 @@
     height: 70px;
     border-bottom: 1px solid #D3D3D3;
     color: #153e5c;
-    padding: 0 24px;
+    padding: 0 1.5rem;
+    font-size: 1rem;
+}
+
+.oneCharacterEpisode :last-child {
+    text-align: center;
+}
+
+.oneChracterEpisode {
+    display: grid;
+    grid-template-columns: 0.3fr 1.7fr 1fr 1fr 1.5fr 1fr;
+    text-align: left;
+    align-items: center;
+    height: 70px;
+    border-bottom: 1px solid #D3D3D3;
+    color: #153e5c;
+    padding: 0 1.5rem;
     font-size: 16px;
 }
 
@@ -155,7 +167,7 @@
     .oneCharacterTableHead {
         grid-template-columns: 0.3fr 1.3fr 1fr 1fr 1.3fr 1fr;
     }
-    .oneEpisode {
+    .oneCharacterEpisode {
         grid-template-columns: 0.3fr 1.3fr 1fr 1fr 1.3fr 1fr;
     }
 }
@@ -164,7 +176,28 @@
     .oneCharacterTableHead {
         grid-template-columns: 0.3fr 1.2fr 1fr 1fr 1fr 1fr;
     }
-    .oneEpisode {
+    .oneCharacterEpisode {
         grid-template-columns: 0.3fr 1fr 1fr 1fr 1fr 1fr;
     }
 }
+
+@media (max-width: 600px) {
+    .oneCharacterTableRoot{
+        width: 100%;
+    }
+    .episodeDate {
+        display: none;
+    }
+    .oneCharacterTableHead {
+        grid-template-columns: 0.3fr 1.2fr 1fr 1fr;
+    }
+    .oneCharacterEpisode {
+        grid-template-columns: 0.3fr 1fr 1fr 0.3fr;
+    }
+    .avatar {
+        left: 33%;
+    }
+    .oneCharacterInfo {
+        padding: 0;
+    }
+}  

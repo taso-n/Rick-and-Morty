@@ -45,20 +45,22 @@ function makeEpisode(data){
                 list.innerHTML = list.innerHTML +
             `
         <div class="oneEpisodeCharacter">
-            <div>
-                <p>id - ${characterData.id}</p>
-                <p>status - ${characterData.status}</p>
-                <p>species - ${characterData.species}</p>
-                <p>gender - ${characterData.gender}</p>
-                <div class="oneEpisodeCharacterActions">
-                    <a href="/#/character/${characterData.id}">
-                        <img class="linkIcon" src="./src/images/link.svg" />
-                    </a>
+            <div class="oneEpisodeUpper">
+                <div>
+                    <p>id - ${characterData.id}</p>
+                    <p>status - ${characterData.status}</p>
+                    <p>species - ${characterData.species}</p>
+                    <p>gender - ${characterData.gender}</p>
+                    <div class="oneEpisodeCharacterActions">
+                        <a href="/#/character/${characterData.id}">
+                            <img class="linkIcon" src="./src/images/link.svg" />
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="oneEpisodeCharacterLeftSide">
-                <p>${characterData.name}</p>
-                <img src="${characterData.image}"/>
+                <div class="oneEpisodeCharacterLeftSide">
+                    <p>${characterData.name}</p>
+                    <img src="${characterData.image}"/>
+                </div>
             </div>
             <div class="oneEpisodeCharacterFooter">
                 <p>${characterData.created}</p>

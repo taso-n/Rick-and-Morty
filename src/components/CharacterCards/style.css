@@ -81,3 +81,10 @@
     width: 1rem;
     height: 1rem;
 }
+
+
+@media (max-width: 480px) {
+    .one-character {
+        width: 95%;
+    }
+}

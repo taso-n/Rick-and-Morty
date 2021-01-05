@@ -8,8 +8,8 @@ var episodesTable = `
                     <th>ID</th>
                     <th>Name</th>
                     <th>Code</th>
-                    <th>Air Date</th>
-                    <th>Created</th>
+                    <th class="episodeDate">Air Date</th>
+                    <th class="episodeDate">Created</th>
                     <th>Actions</th>
                 </tr>
 
@@ -34,8 +34,8 @@ export function FavoriteEpisodes () {
                         <td class="episodeName">${element.id}</td>
                         <td class="episodeName">${element.name}</td>
                         <td class="episodeName">${element.episode}</td>
-                        <td class="episodeName">${element.air_date}</td>
-                        <td class="episodeName">${element.created}</td>
+                        <td class="episodeName episodeDate">${element.air_date}</td>
+                        <td class="episodeName episodeDate">${element.created}</td>
                         <td class="episodeName">
                             <a href="/#/episode/${element.id}">
                                 <img class="actionIcons" src="./src/images/link.svg" />

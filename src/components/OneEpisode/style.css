@@ -63,12 +63,17 @@
     border-radius: 4px;
     box-shadow:  rgba(0, 0, 0, 0.1) 2px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px 5px;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     text-align: center;
     font-size: 0.875rem;
     color: #153e5c;
     justify-content: space-between;
     text-transform: capitalize;
+}
+.oneEpisodeUpper {
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
 }
 .oneEpisodeCharacterActions {
     margin-top: 0.75rem;
@@ -81,16 +86,57 @@
 }
 .oneEpisodeCharacterLeftSide {
     display: flex;
+    align-items: center;
     flex-direction: column;
 }
 
 .oneEpisodeCharacterLeftSide img {
-    height: 9.375rem;
-    width: 9.375rem;
+    height: 10rem;
+    width: 10rem;
 }
 
 .oneEpisodeCharacterFooter {
     width: 100%;
     justify-content: center;
+}
+
+@media (max-width: 1024px) {
+    .oneEpisodeRoot {
+        width: 90%;
+    }
+    #oneEpisodeCharacterList {
+        padding: 1rem 1rem;
+        grid-template-columns: 1fr 1fr;
+    }
+    .oneEpisodeCharacterLeftSide img{
+        width: 50%;
+        object-fit: cover;
+        border-radius: 3px;
+    }
+
+}    
+
+@media (max-width: 700px) {
+    .oneEpisodeRoot {
+        width: 100%;
+    }
+    #oneEpisodeCharacterList {
+        padding: 1rem 0;
+        grid-template-columns: 1fr 1fr;
+    }
+    .oneEpisodeCharacter {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .oneEpisodeUpper {
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    .oneEpisodeCharacterLeftSide img{
+        width: 100%;
+        object-fit: cover;
+        border-radius: 3px;
+    }
 }
 

@@ -19,7 +19,7 @@
 }
 
 .episodesThead {
-    padding: 0 24px;
+    padding: 0 1.5rem;
     border-bottom: 1px solid #D3D3D3;
 }
 
@@ -51,8 +51,8 @@
     height: 70px;
     border-bottom: 1px solid #D3D3D3;
     color: #153e5c;
-    padding: 0 24px;
-    font-size: 16px;
+    padding: 0 1.5rem;
+    font-size: 1rem;
 }
 
 .actionIcons {
@@ -78,3 +78,25 @@
         grid-template-columns: 0.3fr 1fr 1fr 1fr 1fr 1fr;
     }
 }
+
+
+@media (max-width: 600px) {
+    .episodesTableRoot {
+        width: 100%;
+    }
+    .episodeDate {
+        display: none;
+    }
+    .episodesTableHead {
+        grid-template-columns: 0.3fr 1.2fr 1fr 0.3fr;
+    }
+    .oneEpisode {
+        grid-template-columns: 0.3fr 1fr 1fr 0.3fr;
+    }
+}
+
+@media (max-width: 1024px) {
+    .episodesTableRoot {
+        width: 90%;
+    }
+}    
