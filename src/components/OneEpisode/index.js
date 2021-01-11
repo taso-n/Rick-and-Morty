@@ -11,8 +11,7 @@ var episodeWrapper = `
 </div>
 `
 
-export function OneEpisode(id) {
-    console.log(id);
+export function OneEpisode({id}) {
     fetch(`https://rickandmortyapi.com/api/episode/${id}`)
     .then(response => response.json())
     .then(data => makeEpisode(data))

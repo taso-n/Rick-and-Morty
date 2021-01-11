@@ -38,8 +38,7 @@ var characterWrapper = `
 `
 let currCharacter;
 
-export function OneCharacter(id) {
-    console.log(id);
+export function OneCharacter({id}) {
     fetch(`https://rickandmortyapi.com/api/character/${id}`)
     .then(response => response.json())
     .then(data => makeCharacter(data))
@@ -90,8 +89,5 @@ function makeCharacter(data){
 document.addEventListener('click', function (e) {
     if(e.target.id === `characters/${currCharacter?.id}`){
         handleFavCharacterClick(currCharacter)
-    }
-    if(e.target?.id?.toString().includes('episodes/')){
-        // handleFavEpisodeClick()
     }
 })

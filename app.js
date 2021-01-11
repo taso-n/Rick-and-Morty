@@ -1,16 +1,9 @@
-import Router from './router.js';
 import { Characters } from './src/components/CharacterCards/index.js'
 import { Episodes } from './src/components/Episodes/episodes.js'
 import { OneCharacter } from './src/components/OneCharacter/index.js'
 import { OneEpisode } from './src/components/OneEpisode/index.js'
 import { FavoriteCharacters } from './src/components/FavoriteCharacters/index.js'
 import { FavoriteEpisodes } from './src/components/FavoriteEpisodes/index.js'
-
-
-const router = new Router({
-  mode: 'hash',
-  root: '/characters'
-});
 
 var characterData;
 var episodesData;
@@ -24,26 +17,32 @@ fetch("https://rickandmortyapi.com/api/episode")
   .then(response => response.json())
   .then(data => episodesData = data)
 
-router
-  .add(/characters/, () => {
+const myRoutes = {
+  '/characters': () => {
     new Characters(characterData);
-  })
-  .add(/episodes/, () => {
+  },
+  '/episodes': () => {
     new Episodes(episodesData);
-  })
-  .add(/favoriteCharacters/, () => {
+  },
+  '/favoriteCharacters': () => {
     new FavoriteCharacters();
-  })
-  .add(/favoriteEpisodes/, () => {
+  },
+  '/favoriteEpisodes': () => {
     new FavoriteEpisodes();
-  })
-  .add(/character\/(.*)/, (id) => {
+  },
+  '/character/:id/': (id) => {
     new OneCharacter(id)
-  })
-  .add(/episode\/(.*)/, (id) => {
+  },
+  '/episode/:id/': (id) => {
     new OneEpisode(id)
-  })
-  .add('', () => {
-    // general controller
-    console.log('welcome in catch all controller');
-  });
+  }
+}
+
+var root = null;
+var useHash = true;
+var hash = '#'
+
+window.addEventListener("load", () => {
+  var router = new Navigo(root, useHash, hash);
+  router.on(myRoutes).resolve();
+})
