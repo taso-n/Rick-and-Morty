@@ -40,7 +40,7 @@ const myRoutes = {
 
 var root = null;
 var useHash = true;
-var hash = '#'
+var hash = 'Rick-and-Morty/#'
 
 window.addEventListener("load", () => {
   var router = new Navigo(root, useHash, hash);
