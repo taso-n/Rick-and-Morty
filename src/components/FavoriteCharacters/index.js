@@ -1,4 +1,4 @@
-import { getFavCharactersList } from '/src/helpers/favorites.js';
+import { getFavCharactersList } from '../../helpers/favorites.js'
 
 
 export function FavoriteCharacters () {

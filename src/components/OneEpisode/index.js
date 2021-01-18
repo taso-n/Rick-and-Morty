@@ -1,4 +1,4 @@
-import { isFavoriteEpisode, handleFavEpisodeClick } from '/src/helpers/favorites.js';
+import { isFavoriteEpisode, handleFavEpisodeClick } from '../../helpers/favorites.js'
 
 var episodeWrapper = `
 <div class="oneEpisodeWrapper">

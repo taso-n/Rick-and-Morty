@@ -1,4 +1,4 @@
-import { getFavEpisodesList } from '/src/helpers/favorites.js';
+import { getFavEpisodesList } from '../../helpers/favorites.js'
 
 var episodesTable = `
 <div class="episodesTableWrapper">

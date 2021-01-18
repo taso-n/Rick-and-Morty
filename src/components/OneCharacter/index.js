@@ -1,4 +1,4 @@
-import { isFavoriteCharacter, handleFavCharacterClick } from '/src/helpers/favorites.js';
+import { isFavoriteCharacter, handleFavCharacterClick } from '../../helpers/favorites.js'
 
 var characterWrapper = `
         <div class="oneCharacterHeader">
