@@ -75,7 +75,7 @@ function makeCharacter(data){
                 <td class="episodeName episodeDate">${episodeData.air_date}</td>
                 <td class="episodeName episodeDate">${episodeData.created}</td>
                 <td class="episodeName">
-                    <a href="/#/episode/${episodeData.id}">
+                    <a href="#/episode/${episodeData.id}" data-navigo>
                         <img class="actionIcons" src="./src/images/link.svg" />
                     </a>
                 </td>

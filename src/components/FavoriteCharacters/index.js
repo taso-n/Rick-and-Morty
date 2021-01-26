@@ -13,7 +13,7 @@ export function FavoriteCharacters () {
             data.forEach(element => {
                 container.innerHTML = container.innerHTML +
                 `
-                <a href="/#/character/${element.id}">
+                <a href="#/character/${element.id}" data-navigo>
                 <div class="one-character">
                     <div class="image-wrapper">
                         <img class="image" src=${element.image} />

@@ -34,7 +34,7 @@ export function Episodes (data) {
                         <td class="episodeName episodeDate">${element.air_date}</td>
                         <td class="episodeName episodeDate">${element.created}</td>
                         <td class="episodeName">
-                            <a href="/#/episode/${element.id}">
+                            <a href="#/episode/${element.id}" data-navigo>
                                 <img class="actionIcons" src="./src/images/link.svg" />
                             </a>
                         </td>

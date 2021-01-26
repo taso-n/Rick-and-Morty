@@ -51,7 +51,7 @@ function makeEpisode(data){
                     <p>species - ${characterData.species}</p>
                     <p>gender - ${characterData.gender}</p>
                     <div class="oneEpisodeCharacterActions">
-                        <a href="/#/character/${characterData.id}">
+                        <a href="#/character/${characterData.id}" data-navigo>
                             <img class="linkIcon" src="./src/images/link.svg" />
                         </a>
                     </div>
