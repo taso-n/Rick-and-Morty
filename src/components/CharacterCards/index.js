@@ -11,7 +11,7 @@ export function Characters (data) {
                 <a href="#/character/${element.id}/" data-navigo>
                     <div class="one-character">
                         <div class="image-wrapper">
-                            <img class="image" src=${element.image} />
+                            <img class="image" src=${element.image} alt="characterImage" />
                         </div>
                         <div class="info">
                             <span class="name">${element.name}</span>
@@ -20,7 +20,7 @@ export function Characters (data) {
                             <span class="location">${element.origin.name}</span>
                             <span class="title">Current location</span>
                             <span class="location">
-                                <img class="locationIcon" src="./src/images/location.svg"/>
+                                <img class="locationIcon" src="./src/images/location.svg" alt="location" />
                                 ${element.location.name}
                             </span>
                         </div>

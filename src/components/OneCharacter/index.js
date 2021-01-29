@@ -57,7 +57,7 @@ function makeCharacter(data){
     console.log(isFav, 22);
     favIcon.innerHTML = `<span id="characters/${data.id}" class="${isFav ? 'markedAsFavCharacter' : 'starIconCharacter'}">&#9733;</span>`
     image.innerHTML = `
-    <img class="oneCharacterImage" src="${data.image}" />
+    <img class="oneCharacterImage" src="${data.image}" alt="characterImage" />
     `
     header.innerHTML = `
     <span class="oneCharacterName">${data.name}</span>
@@ -76,7 +76,7 @@ function makeCharacter(data){
                 <td class="episodeName episodeDate">${episodeData.created}</td>
                 <td class="episodeName">
                     <a href="#/episode/${episodeData.id}" data-navigo>
-                        <img class="actionIcons" src="./src/images/link.svg" />
+                        <img class="actionIcons" src="./src/images/link.svg" alt="linkIcon" />
                     </a>
                 </td>
             </tr>

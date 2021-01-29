@@ -52,13 +52,13 @@ function makeEpisode(data){
                     <p>gender - ${characterData.gender}</p>
                     <div class="oneEpisodeCharacterActions">
                         <a href="#/character/${characterData.id}" data-navigo>
-                            <img class="linkIcon" src="./src/images/link.svg" />
+                            <img class="linkIcon" src="./src/images/link.svg" alt="linkIcon" />
                         </a>
                     </div>
                 </div>
                 <div class="oneEpisodeCharacterLeftSide">
                     <p>${characterData.name}</p>
-                    <img src="${characterData.image}"/>
+                    <img src="${characterData.image}" alt="characterImage" />
                 </div>
             </div>
             <div class="oneEpisodeCharacterFooter">
