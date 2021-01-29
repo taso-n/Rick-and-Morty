@@ -10,7 +10,7 @@ var episodesTable = `
                     <th>Code</th>
                     <th class="episodeDate">Air Date</th>
                     <th class="episodeDate">Created</th>
-                    <th>Actions</th>
+                    <th>View episode</th>
                 </tr>
 
             </thead>
