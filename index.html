@@ -16,32 +16,18 @@
     <div class="navigationRoot">
         <div id="menuToggle">
             <nav class="mobileNavigation" role="navigation">
-                <input type="checkbox" />
+                <input type="checkbox" id="navCheckbox"/>
                     <span></span>
                     <span></span>
                     <span></span>
-                <ul id="menu">
-                <li>
-                    <a href="/characters" data-navigo class="link">Characters</a>
-                </li>
-                <li>
-                    <a href="/episodes" data-navigo class="link">Episodes</a>
-                </li>
-                <li>
-                    <a href="/favoriteCharacters" data-navigo class="link">Favorite Characters</a>
-                </li>
-                <li>
-                    <a href="/favoriteEpisodes" data-navigo class="link">Favorite Episodes</a>
-                </li>
+                <ul id="menu" class="navigation">
+                    <li><a href="/characters" data-navigo class="link">Characters</a></li>
+                    <li><a href="/episodes" data-navigo class="link">Episodes</a></li>
+                    <li><a href="/favoriteCharacters" data-navigo class="link">Favorite Characters</a></li>
+                    <li><a href="/favoriteEpisodes" data-navigo class="link">Favorite episodes</a></li>
                 </ul>
             </nav>
         </div>
-        <ul class="navigation">
-            <li><a href="/characters" data-navigo class="link">Characters</a></li>
-            <li><a href="/episodes" data-navigo class="link">Episodes</a></li>
-            <li><a href="/favoriteCharacters" data-navigo class="link">Favorite Characters</a></li>
-            <li><a href="/favoriteEpisodes" data-navigo class="link">Favorite episodes</a></li>
-        </ul>
     </div>
     <div id="root">
     </div>
@@ -49,5 +35,6 @@
     <script src="https://unpkg.com/navigo@6.0.2/lib/navigo.min.js"></script>
     <script type="module" src='./app.js'></script>
     <script type="module" src='./src/helpers/favorites.js'></script>
+    <script type="module" src='./src/helpers/navBar.js'></script>
 </body>
 </html>
