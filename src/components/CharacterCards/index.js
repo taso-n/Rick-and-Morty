@@ -1,6 +1,12 @@
+var nextPage = "";
+var prevPage = "";
+var curPage = 1;
+
 export function Characters (data) {
     const characters = document.querySelector('#root')
     if(data) {
+        nextPage = data.info.next
+        prevPage = data.info.prev
         characters.innerHTML = `
             <div id="cardsContainer" class='cards-container'></div>
         `
@@ -28,12 +34,46 @@ export function Characters (data) {
                 </a>
                 `
         });
+        container.innerHTML = container.innerHTML + `
+        <div class="paginationWrapper">
+            <div class="paginationContainer">
+                <button id="characterPrev" href="#" class="paginationArrow">&laquo;</button>
+                ${curPage} / ${data.info.pages}
+                <button id="characterNext" href="#" class="paginationArrow">&raquo;</button>
+            </div>
+        </div>
+        `
     } else {
         characters.innerHTML = `<div class="loading"></div>`
     }
 }
 
-
 fetch("https://rickandmortyapi.com/api/character")
   .then(response => response.json())
   .then(data => Characters(data))
+
+function fetchPage(page) {
+    fetch(page)
+    .then(response => response.json())
+    .then(data => Characters(data))
+}
+
+document.addEventListener('click', function (e) {
+    if(e.target.id === 'characterNext') {
+        if(nextPage) {
+            fetchPage(nextPage)
+            curPage += 1
+        }
+    }
+    if(e.target.id === 'characterPrev') {
+        if(prevPage) {
+            fetchPage(prevPage)
+            curPage -= 1
+        }
+    }
+    if(e.target.className === 'link') {
+        nextPage = ""
+        prevPage = ""
+        curPage = 1
+    }
+})

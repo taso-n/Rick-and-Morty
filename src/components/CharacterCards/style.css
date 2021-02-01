@@ -1,10 +1,14 @@
-
-
 .cards-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: -18rem;
+    margin-top: -17rem;
+}
+
+@media (max-width: 1024px) {
+    .cards-container {
+        margin-top: -25rem;
+    }
 }
 
 .one-character {
@@ -86,4 +90,27 @@
     .one-character {
         width: 95%;
     }
+}
+.paginationWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.paginationContainer {
+    background-color:  #090A0F;
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    width: 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+  
+.paginationContainer button {
+    color: white;
+    border: none;
+    font-size: 1.25rem;
+    cursor: pointer;
+    background: transparent;
 }
