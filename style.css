@@ -192,6 +192,7 @@ align-items: center;
   margin: 0;
   padding-top: 70px;
   backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
 
 #menu li
@@ -243,3 +244,97 @@ align-items: center;
   }
 
 }
+
+.footer {
+	width: 100%;
+	background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+  display: block;
+  margin-top: 4.375rem;
+ }
+
+ .innerFooter {
+	 width: 95%;
+	 margin: auto;
+	 padding: 1.875rem 0.625rem;
+	 display: flex;
+	 flex-wrap: wrap;
+	 box-sizing: border-box;
+	 justify-content: space-between;
+ }
+
+.footerDetails {
+	width: 25%;
+	padding: 0.625rem 1.25rem;
+	box-sizing: border-box;
+	color: #fff;
+}
+
+.footerDetails p {
+	font-size: 1rem;
+	text-align: justify;
+	line-height: 1.5625rem;
+	color: #fff;
+}
+
+.footerDetails h1 {
+	color: #fff;
+}
+
+.divider {
+	height: 0.1875rem;
+	width: 2.5rem;
+	background: #ff9800;
+	color: #ff9800;
+	background-color: #ff9800;
+	border: 0px;
+}
+
+.footerList {
+	list-style: none;
+	color: #fff;
+	font-size: 0.9375rem;
+	letter-spacing: 0.5px;	
+ }
+
+.footerList a {
+	text-decoration: none;
+	outline: none;
+	color: #fff;
+	transition: 0.3s;
+}
+
+.footerList a:hover {
+	color: #ff9800;
+}
+
+.footerList li {
+	margin: 0.625rem 0;
+	height: 1.5625rem;
+}
+
+.footerBottom {
+	padding: 0.625rem;
+	color: #fff;
+	font-size: 0.75rem;
+	text-align: center;
+}
+
+/* for tablet mode view */
+
+@media screen and (max-width: 1275px) {
+	.footerDetails {
+		width: 50%;
+	}
+}
+
+/* for mobile screen view */
+
+@media screen and (max-width: 660px) {
+	.footerDetails {
+		width: 100%;
+	}
+}
+
+/* you can toggle the media screen view accordingly by changing the (max-width: px) to your convenience */
+
+/* Thanks to Computer Conversations */

@@ -2,9 +2,9 @@ export function Characters (data) {
     const characters = document.querySelector('#root')
     if(data) {
         characters.innerHTML = `
-            <div id="#cardsContainer" class='cards-container'></div>
+            <div id="cardsContainer" class='cards-container'></div>
         `
-        const container = document.getElementById('#cardsContainer')
+        const container = document.getElementById('cardsContainer')
         data.results.forEach(element => {
             container.innerHTML = container.innerHTML +
                 `
