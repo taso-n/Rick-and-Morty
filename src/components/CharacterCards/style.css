@@ -2,13 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: -17rem;
-}
-
-@media (max-width: 1024px) {
-    .cards-container {
-        margin-top: -25rem;
-    }
+    margin-top: 4rem;
 }
 
 .one-character {
@@ -100,7 +94,7 @@
     background-color:  #090A0F;
     padding: 0.5rem 1rem;
     border-radius: 3px;
-    width: 10rem;
+    width: 8rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
