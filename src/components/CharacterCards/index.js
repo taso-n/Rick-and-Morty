@@ -65,12 +65,14 @@ document.addEventListener('click', function (e) {
         if(nextPage) {
             fetchPage(nextPage)
             curPage += 1
+            window.scrollTo(0, 0)
         }
     }
     if(e.target.id === 'characterPrev') {
         if(prevPage) {
             fetchPage(prevPage)
             curPage -= 1
+            window.scrollTo(0, 0)
         }
     }
     if(e.target.className === 'link') {
