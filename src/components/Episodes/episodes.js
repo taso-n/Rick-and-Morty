@@ -8,6 +8,7 @@ var episodesTable = `
             <thead class="episodesThead">
                 <tr class="searchEpisodeHeader">
                     <th class="searchWrapper">
+                        <button id="resetFilter">reset filters</button>
                         <div class="searchBox">
                             <input id="episodeByNameInput" class="searchInput" type="text" placeholder="Search episode by name" />
                             <button id="episodeByName" class="searchButton">
@@ -85,7 +86,10 @@ export function Episodes (data) {
 function NoEpisodeFound () {
     const epsiodes = document.querySelector('#root')
     epsiodes.innerHTML = `
-    <div class="noData">No episode found</div>`
+    <div class="noData">No episode found
+    <button id="resetFilter">reset filters</button>
+    </div>    
+    `
     const footer = document.getElementById('footer')
     footer.style.marginTop = 'calc(50vh -  16.9375rem)'
 }
@@ -131,5 +135,9 @@ document.addEventListener('click', function (e) {
         if(inputValue) {
             findEpisode(inputValue)
         }
+    }
+    if(e.target.id === 'resetFilter'){
+        fetchPage("https://rickandmortyapi.com/api/episode")
+        curPage = 1
     }
 })

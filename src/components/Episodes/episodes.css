@@ -126,11 +126,10 @@
     height: 3.75rem;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
 }
 
 .searchBox {
-    position: absolute;
     background: #1B2735;
     height: 1.875rem;
     border-radius: 40px;
@@ -178,6 +177,18 @@
     transition: 0.4s;
     line-height: 1.875rem;
     width: 0px;
+}
+
+#resetFilter {
+    border: 1px solid #f2be54;
+    background: #1B2735;
+    color: white;
+    border-radius: 8px;
+    height: 1.875rem;
+    font-size: 12px;
+    text-transform: capitalize;
+    cursor: pointer;
+    
 }
 
 @media (max-width: 600px) {
