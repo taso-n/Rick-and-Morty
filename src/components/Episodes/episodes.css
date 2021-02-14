@@ -196,3 +196,21 @@
         width: 17rem;
     }
 }
+
+@media (max-width: 400px) {
+    .searchBox:hover > .searchInput {
+        width: 13rem;
+    }
+}
+
+@media (max-width: 330px) {
+    .searchBox:hover > .searchInput {
+        width: 8rem;
+    }
+}
+
+@media (max-width: 280px) {
+    .searchBox:hover > .searchInput {
+        width: 5rem;
+    }
+}
