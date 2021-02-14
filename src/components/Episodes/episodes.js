@@ -6,6 +6,18 @@ var episodesTable = `
 <div class="episodesTableWrapper">
         <table id="episodesTableRoot" class="episodesTableRoot">
             <thead class="episodesThead">
+                <tr class="searchEpisodeHeader">
+                    <th class="searchWrapper">
+                        <div class="searchBox">
+                            <input id="episodeByNameInput" class="searchInput" type="text" placeholder="Search episode by name" />
+                            <button id="episodeByName" class="searchButton">
+                                <span id="episodeByNameIcon" class="searchIcon">
+                                &#9906
+                                </span>
+                            </button>
+                        </div>
+                    </th>
+                </tr>
                 <tr class="episodesTableHead">
                     <th>ID</th>
                     <th>Name</th>
@@ -59,16 +71,41 @@ export function Episodes (data) {
         </div>
         `
         const footer = document.getElementById('footer')
-        footer.style.marginTop = '4.375rem'
+        if(data.results.length <= 4) {
+            const size = data.results.length * 70 + "px"
+            footer.style.marginTop = `calc(50vh - 8.125rem - ${size})`
+        } else {
+            footer.style.marginTop = '4.375rem'
+        }
     } else {
         epsiodes.innerHTML = `<div class="loading"></div>`
     }
+}
+
+function NoEpisodeFound () {
+    const epsiodes = document.querySelector('#root')
+    epsiodes.innerHTML = `
+    <div class="noData">No episode found</div>`
+    const footer = document.getElementById('footer')
+    footer.style.marginTop = 'calc(50vh -  16.9375rem)'
 }
 
 function fetchPage(page) {
     fetch(page)
     .then(response => response.json())
     .then(data => Episodes(data))
+}
+
+function findEpisode(episodeName) {
+    fetch(`https://rickandmortyapi.com/api/episode/?name=${episodeName}&`)
+        .then(async(response) => {
+            if(response.ok) {
+                let res = await response.json()
+                Episodes(res)
+            } else {
+                NoEpisodeFound()
+            }
+        })
 }
 
 document.addEventListener('click', function (e) {
@@ -88,5 +125,11 @@ document.addEventListener('click', function (e) {
         nextPage = ""
         prevPage = ""
         curPage = 1
+    }
+    if(e.target.id === 'episodeByName' || e.target.id === 'episodeByNameIcon') {
+        const inputValue = document.getElementById('episodeByNameInput').value
+        if(inputValue) {
+            findEpisode(inputValue)
+        }
     }
 })

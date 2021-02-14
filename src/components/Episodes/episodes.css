@@ -107,3 +107,76 @@
     justify-content: center;
     padding: 1rem 0;
 }
+
+
+.searchEpisodeHeader {
+    height: 3.75rem;
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr;
+    text-align: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #153e5c;
+    font-weight: 500;
+    border-bottom: 1px dashed;
+}
+
+.searchWrapper {
+    height: 3.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.searchBox {
+    position: absolute;
+    background: #1B2735;
+    height: 1.875rem;
+    border-radius: 40px;
+    padding: 0.625rem;
+}
+
+.searchBox:hover > .searchInput {
+    width: 25rem;
+    padding: 0 6px;
+}
+
+.searchBox:hover > .searchButton {
+  background: #f2be54;
+  color : #1B2735;
+}
+
+.searchIcon {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.searchButton {
+    color: white;
+    float: right;
+    width: 1.875rem;
+    height: 1.875rem;
+    border-radius: 50%;
+    background: #1B2735;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+    border: 2px solid #f2be54;
+    cursor: pointer;
+}
+
+.searchInput {
+    border:none;
+    background: none;
+    outline:none;
+    float:left;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 1.875rem;
+    width: 0px;
+
+}
