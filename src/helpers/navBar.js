@@ -1,9 +1,7 @@
 function closeNavBar() {
     var isChecked = document.getElementById("navCheckbox").checked
-    console.log(isChecked);
     if(isChecked){
         document.getElementById("navCheckbox").checked = false
-        console.log(isChecked);
     }
 }
 

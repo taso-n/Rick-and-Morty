@@ -3,7 +3,6 @@ import { getFavCharactersList } from '../../helpers/favorites.js'
 
 export function FavoriteCharacters () {
     const data = getFavCharactersList()
-    console.log(data);
     const characters = document.querySelector('#root')
     if(data.length > 0) {
         characters.innerHTML = `

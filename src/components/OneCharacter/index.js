@@ -52,7 +52,6 @@ function makeCharacter(data){
     const favIcon = document.querySelector('.icon-wrapper')
 
     const isFav = isFavoriteCharacter(data)
-    console.log(isFav, 22);
     favIcon.innerHTML = `<span id="characters/${data.id}" class="${isFav ? 'markedAsFavCharacter' : 'starIconCharacter'}">&#9733;</span>`
     image.innerHTML = `
     <img class="oneCharacterImage" src="${data.image}" alt="characterImage" />
