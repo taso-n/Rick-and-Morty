@@ -68,6 +68,8 @@ function makeEpisode(data){
         `
         )
     });
+    const footer = document.getElementById('footer')
+    footer.style.marginTop = '4.375rem'
 }
 
 document.addEventListener('click', function (e) {

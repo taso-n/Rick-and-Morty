@@ -23,7 +23,7 @@ body {
 
 .background {
   background-image: linear-gradient(to bottom, rgba(16, 12, 78, 0.062), rgba(96, 168, 233, 0.43)), url('src/images/headerCover.jpg');
-  height: 40vh;
+  height: 50vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

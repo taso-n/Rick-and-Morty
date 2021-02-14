@@ -45,8 +45,17 @@ export function FavoriteEpisodes () {
                 </tr>
                 `
         });
+        const footer = document.getElementById('footer')
+        if(data.length <= 4) {
+            const size = data.length * 70 + "px"
+            footer.style.marginTop = `calc(50vh - 8.125rem - ${size})`
+        } else {
+            footer.style.marginTop = '4.375rem'
+        }
     } else {
         epsiodes.innerHTML = 
         `<div class="noData">You don't have any favorite episodes yet</div>`
+        const footer = document.getElementById('footer')
+        footer.style.marginTop = 'calc(50vh -  16.9375rem)'
     }
 }

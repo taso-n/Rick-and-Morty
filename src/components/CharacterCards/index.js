@@ -43,6 +43,8 @@ export function Characters (data) {
             </div>
         </div>
         `
+        const footer = document.getElementById('footer')
+        footer.style.marginTop = '4.375rem'
     } else {
         characters.innerHTML = `<div class="loading"></div>`
     }

@@ -58,6 +58,8 @@ export function Episodes (data) {
             </div>
         </div>
         `
+        const footer = document.getElementById('footer')
+        footer.style.marginTop = '4.375rem'
     } else {
         epsiodes.innerHTML = `<div class="loading"></div>`
     }

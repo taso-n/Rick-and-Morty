@@ -33,9 +33,17 @@ export function FavoriteCharacters () {
                 </a>
                 `
             });
+            const footer = document.getElementById('footer')
+            if(data.length <= 3) {
+                footer.style.marginTop = 'calc(50vh -  19.6875rem)'
+            } else {
+                footer.style.marginTop = '4.375rem'
+            }
     } else {
         characters.innerHTML =
         `<div class="noData">You don't have any favorite characters yet</div>`
+        const footer = document.getElementById('footer')
+        footer.style.marginTop = 'calc(50vh -  16.9375rem)'
     }
 
 }

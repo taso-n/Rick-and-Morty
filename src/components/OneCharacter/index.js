@@ -83,6 +83,8 @@ function makeCharacter(data){
             `
         )
     });
+    const footer = document.getElementById('footer')
+    footer.style.marginTop = '4.375rem'
 }
 
 
