@@ -178,5 +178,10 @@
     transition: 0.4s;
     line-height: 1.875rem;
     width: 0px;
+}
 
+@media (max-width: 600px) {
+    .searchBox:hover > .searchInput {
+        width: 17rem;
+    }
 }
