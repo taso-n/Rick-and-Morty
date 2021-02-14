@@ -2,9 +2,6 @@ import { isFavoriteCharacter, handleFavCharacterClick } from '../../helpers/favo
 
 var characterWrapper = `
         <div class="oneCharacterHeader">
-            <div id='stars'></div>
-            <div id='stars2'></div>
-            <div id='stars3'></div>
             <div class="avatar">
                 <div id="imageSource" class="oneCharacterImageWrapper">
                 </div>
@@ -19,6 +16,7 @@ var characterWrapper = `
             <div class="oneCharacterTableWrapper">
                 <table class="oneCharacterTableRoot">
                     <thead class="oneCharacterThead">
+                        <tr class="characterAppearedEpisodes"><th>Appeared espiodes</th></th>
                         <tr class="oneCharacterTableHead">
                             <th>ID</th>
                             <th>Name</th>

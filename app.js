@@ -35,6 +35,9 @@ const myRoutes = {
   },
   '/episode/:id/': (id) => {
     new OneEpisode(id)
+  },
+  '/': () => {
+    new Characters(characterData);
   }
 }
 
@@ -43,7 +46,6 @@ var useHash = true;
 var hash = '#'
 
 window.addEventListener("load", () => {
-  document.getElementById('footer').style.display = 'none'
   document.getElementById('root').innerHTML = `<div class="loading"></div>`
   var router = new Navigo(root, useHash, hash);
   router.on(myRoutes).resolve();
