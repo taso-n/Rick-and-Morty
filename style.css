@@ -1,5 +1,6 @@
 html {
   font-size: 100%;
+  scroll-behavior: smooth;
 }
 
 @media (max-width: 1200px) {
@@ -334,4 +335,24 @@ ul {
 	.footerDetails {
 		width: 100%;
 	}
+}
+
+.scrolltop .icon {
+  font-size: 30px;
+  text-align: center;
+  transform: rotate(-45deg);
+  margin-top: 10px;
+  font-size: 24px;
+}
+
+.scrolltop {
+  position: fixed;
+  bottom: 70px;
+  right: 40px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #fff;
+  cursor: pointer;
+  display: none;
 }
