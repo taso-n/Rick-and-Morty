@@ -1,0 +1,14 @@
+{
+  "name": "rick-and-morty",
+  "version": "1.0.0",
+  "main": "main.js",
+  "repository": "https://github.com/taso-n/Rick-and-Morty.git",
+  "author": "taso-n",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^12.0.4"
+  }
+}
